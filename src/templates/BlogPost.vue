@@ -97,7 +97,7 @@ query BlogPost ($path: String!) {
     transform: translate(-50%, -100%);
 
     font-weight: bold;
-    opacity: 0.2;
+    opacity: 0.5;
   }
 }
 

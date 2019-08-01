@@ -19,7 +19,7 @@
 
       &__down {
         position: absolute;
-        bottom: var(--sm-space);
+        bottom: var(--space);
         opacity: 0.5;
 
         animation: var(--anim-bounce);
