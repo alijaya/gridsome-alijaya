@@ -1,0 +1,25 @@
+body {
+  --anim-pulse: pulse 0.5s ease infinite alternate;
+  --anim-bounce: bounce 0.25s ease infinite alternate;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-10%);
+  }
+}
+
+@keyframes pulse {
+  0% {
+    transform: translateY(0%);
+  }
+  80% {
+    transform: translateY(0%);
+  }
+  100% {
+    transform: translateY(-5%);
+  }
+}

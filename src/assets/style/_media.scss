@@ -1,0 +1,160 @@
+$phone: 600px;
+$portrait: 900px;
+$landscape: 1200px;
+$desktop: 1800px;
+
+@mixin only-phone {
+  @media (max-width: #{$phone}) {
+    @content;
+  }
+}
+
+@mixin only-portrait {
+  @media (min-width: #{$phone + 1px}) and (max-width: #{$portrait}) {
+    @content;
+  }
+}
+
+@mixin only-landscape {
+  @media (min-width: #{$portrait + 1px}) and (max-width: #{$landscape}) {
+    @content;
+  }
+}
+
+@mixin only-desktop {
+  @media (min-width: #{$landscape + 1px}) and (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin only-hd-desktop {
+  @media (min-width: #{$desktop + 1px}) {
+    @content;
+  }
+}
+
+@mixin to-phone {
+  @media (max-width: #{$phone}) {
+    @content;
+  }
+}
+
+@mixin to-portrait {
+  @media (max-width: #{$portrait}) {
+    @content;
+  }
+}
+
+@mixin to-landscape {
+  @media (max-width: #{$landscape}) {
+    @content;
+  }
+}
+
+@mixin to-desktop {
+  @media (max-width: #{$desktop}) {
+    @content;
+  }
+}
+
+@mixin from-portrait {
+  @media (min-width: #{$phone + 1px}) {
+    @content;
+  }
+}
+
+@mixin from-landscape {
+  @media (min-width: #{$portrait + 1px}) {
+    @content;
+  }
+}
+
+@mixin from-desktop {
+  @media (min-width: #{$landscape + 1px}) {
+    @content;
+  }
+}
+
+@mixin from-hd-desktop {
+  @media (min-width: #{$desktop + 1px}) {
+    @content;
+  }
+}
+
+.hide-only-phone {
+  @include only-phone {
+    display: none;
+  }
+}
+
+.hide-only-portrait {
+  @include only-portrait {
+    display: none;
+  }
+}
+
+.hide-only-landscape {
+  @include only-landscape {
+    display: none;
+  }
+}
+
+.hide-only-desktop {
+  @include only-desktop {
+    display: none;
+  }
+}
+
+.hide-only-hd-desktop {
+  @include only-hd-desktop {
+    display: none;
+  }
+}
+
+.hide-to-phone {
+  @include to-phone {
+    display: none;
+  }
+}
+
+.hide-to-portrait {
+  @include to-portrait {
+    display: none;
+  }
+}
+
+.hide-to-landscape {
+  @include to-landscape {
+    display: none;
+  }
+}
+
+.hide-to-desktop {
+  @include to-desktop {
+    display: none;
+  }
+}
+
+.hide-from-portrait {
+  @include from-portrait {
+    display: none;
+  }
+}
+
+.hide-from-landscape {
+  @include from-landscape {
+    display: none;
+  }
+}
+
+.hide-from-desktop {
+  @include from-desktop {
+    display: none;
+  }
+}
+
+.hide-from-hd-desktop {
+  @include from-hd-desktop {
+    display: none;
+  }
+}
