@@ -1,25 +1,35 @@
 <template>
-  <Layout>
-    <div class="post-title">
-      <h1 class="post-title__text">
-        {{ $page.post.title }}
-      </h1>
-      
-      <PostMeta :post="$page.post" />
+  <Layout class="page page--blog-post">
 
-    </div>
+    <!-- BlogPost Header -->
+    <header class="page__header page__header--half page__header--overlap">
+      <div class="page__container page__container--center">
+        <div class="post-title">
+          <g-link to="/blog" class="post-title__back">
+            <FAIcon icon="angle-left" /> Blog
+          </g-link>
+          <h1 class="post-title__text">
+            {{ $page.post.title }}
+          </h1>
+          
+          <PostMeta :post="$page.post" />
+        </div>
+      </div>
+    </header>
     
-    <div class="post content-box">
-      <div class="post__header">
-        <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
-      </div>
+    <section class="page__section">
+      <div class="post content-box">
+        <div class="post__header">
+          <g-image alt="Cover image" v-if="$page.post.cover_image" :src="$page.post.cover_image" />
+        </div>
 
-      <div class="post__content" v-html="$page.post.content" />
+        <div class="post__content" v-html="$page.post.content" />
 
-      <div class="post__footer">
-        <PostTags :post="$page.post" />
+        <div class="post__footer">
+          <PostTags :post="$page.post" />
+        </div>
       </div>
-    </div>
+    </section>
 
     <div class="post-comments">
       <!-- Add comment widgets here -->
@@ -75,11 +85,24 @@ query BlogPost ($path: String!) {
 
 <style lang="scss">
 .post-title {
-  padding: calc(var(--space) / 2) 0 calc(var(--space) / 2);
+  position: relative;
   text-align: center;
+
+  &__back {
+    @extend .a-reset;
+
+    position: absolute;
+    top: 0;
+    left: 50%;
+    transform: translate(-50%, -100%);
+
+    font-weight: bold;
+    opacity: 0.2;
+  }
 }
 
 .post {
+  width: 100%;
 
   &__header {
     width: calc(100% + var(--space) * 2);

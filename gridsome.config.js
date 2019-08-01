@@ -17,7 +17,7 @@ function addStyleResource (rule) {
 }
 
 module.exports = {
-  siteName: 'Gridsome Blog Starter',
+  siteName: "alijaya's website",
   siteDescription: 'A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.',
 
   plugins: [
@@ -47,7 +47,8 @@ module.exports = {
       externalLinksRel: ['nofollow', 'noopener', 'noreferrer'],
       anchorClassName: 'icon icon-link',
       plugins: [
-        '@gridsome/remark-prismjs'
+        '@gridsome/remark-prismjs',
+        'remark-emoji'
       ]
     }
   },
