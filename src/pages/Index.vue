@@ -13,7 +13,7 @@
 
 <page-query>
 {
-  posts: allPost(filter: { published: { eq: true }}) {
+  posts: allBlogPost(filter: { published: { eq: true }}) {
     edges {
       node {
         id
@@ -27,8 +27,8 @@
         date (format: "D. MMMM YYYY")
         timeToRead
         description
-        coverImage (width: 770, height: 380, blur: 10)
-        ...on Post {
+        cover_image (width: 770, height: 380, blur: 10)
+        ...on BlogPost {
             id
             title
             path

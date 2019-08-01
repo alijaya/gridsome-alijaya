@@ -17,13 +17,13 @@ query Tag ($id: String!) {
     belongsTo {
       edges {
         node {
-          ...on Post {
+          ...on BlogPost {
             title
             path
             date (format: "D. MMMM YYYY")
             timeToRead
             description
-            coverImage (width: 860, blur: 10)
+            cover_image (width: 860, blur: 10)
             content
           }
         }

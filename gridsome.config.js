@@ -4,6 +4,18 @@
 // Changes here requires a server restart.
 // To restart press CTRL + C in terminal and run `gridsome develop`
 
+const path = require('path')
+
+function addStyleResource (rule) {
+  rule.use('style-resource')
+    .loader('style-resources-loader')
+    .options({
+      patterns: [
+        path.resolve(__dirname, './src/assets/style/_globals.scss')
+      ]
+    })
+}
+
 module.exports = {
   siteName: 'Gridsome Blog Starter',
   siteDescription: 'A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.',
@@ -13,14 +25,14 @@ module.exports = {
       // Create posts from markdown files
       use: '@gridsome/source-filesystem',
       options: {
-        typeName: 'Post',
-        path: 'content/posts/*.md',
-        route: '/:slug',
+        typeName: 'BlogPost',
+        path: 'content/blog/*.md',
+        route: '/blog/:slug',
         refs: {
           // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
           tags: {
             typeName: 'Tag',
-            route: '/tag/:id',
+            route: '/blog/tag/:id',
             create: true
           }
         }
@@ -39,4 +51,12 @@ module.exports = {
       ]
     }
   },
+
+  chainWebpack (config) {
+    const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
+
+    types.forEach(type => {
+      addStyleResource(config.module.rule('scss').oneOf(type))
+    })
+  }
 }

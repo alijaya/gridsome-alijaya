@@ -1,7 +1,7 @@
 <template>
   <div class="post-card content-box" :class="{'post-card--has-poster' : post.poster}">
     <div class="post-card__header">
-      <g-image alt="Cover image" v-if="post.coverImage" class="post-card__image" :src="post.coverImage" />
+      <g-image alt="Cover image" v-if="post.cover_image" class="post-card__image" :src="post.cover_image" />
     </div>
     <div class="post-card__content">
       <h2 class="post-card__title" v-html="post.title" />
@@ -10,7 +10,7 @@
       <PostMeta class="post-card__meta" :post="post" />
       <PostTags class="post-card__tags" :post="post" />
 
-      <g-link class="post-card__link" :to="post.path">Link</g-link>
+      <g-link class="post-card__link" :to="post.path"></g-link>
     </div>
   </div>
 </template>
@@ -65,15 +65,7 @@ export default {
   }
 
   &__link {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    opacity: 0.0;
-    overflow: hidden;
-    text-indent: -9999px;
-    z-index: 0;
+    @extend .a-full;
   }
 }
 </style>
