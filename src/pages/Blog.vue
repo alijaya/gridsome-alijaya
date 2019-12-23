@@ -55,17 +55,4 @@ export default {
 </script>
 
 <style lang="scss">
-.page-index {
-  display: flex;
-  flex-direction: column;
-
-  &__header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background: linear-gradient(135deg, var(--primary-gradient));
-    height: 100vh;
-  }
-}
 </style>

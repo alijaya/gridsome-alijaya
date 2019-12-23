@@ -26,6 +26,10 @@ export default {
 </script>
 
 <style lang="scss">
+.main {
+  flex: 1 1 auto;
+}
+
 .footer {
   position: relative;
   display: flex;
