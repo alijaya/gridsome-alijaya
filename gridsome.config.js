@@ -70,7 +70,5 @@ module.exports = {
     types.forEach(type => {
       addStyleResource(config.module.rule('scss').oneOf(type))
     })
-
-    // config.resolve.alias["vue"] = "vue/dist/vue.common"
   }
 }

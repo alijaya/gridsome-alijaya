@@ -1,6 +1,6 @@
 <template>
   <Layout class="page page--project">
-    <OnConstruction />
+    <OnConstruction page="Project" />
   </Layout>
 </template>
 

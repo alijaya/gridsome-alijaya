@@ -11,8 +11,9 @@ Because the personal nature, [I will post anything that I want](/blog), it will 
 
 If you are new here, you can start from my personal recommendation here.
 
-# [Featured Blog](/blog)
-... [some featured blog here] ...
+# [Featured Blog](/blog/tag/Featured)
+
+<DisplayBlog :data="context.featuredBlog" />
 
 Or if you are interested in what I have done in the past, you can check out my featured project here. It's a compilation of my personal project and my professional project.
 

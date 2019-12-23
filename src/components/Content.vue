@@ -11,7 +11,8 @@ export default {
     VRuntimeTemplate
   },
   props: {
-    template: String
+    template: String,
+    context: Object,
   },
   computed: {
     wrappedTemplate() {

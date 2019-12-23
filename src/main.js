@@ -13,6 +13,7 @@ import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
 // Global Reusable Component
 import Content from "~/components/Content"
+import DisplayBlog from "~/components/DisplayBlog"
 import ContactMeButton from "~/components/ContactMeButton"
 
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
@@ -58,5 +59,6 @@ export default function (Vue, { router, head, isClient }) {
 
   // Global Re-Usable Component
   Vue.component('Content', Content)
+  Vue.component('DisplayBlog', DisplayBlog)
   Vue.component("ContactMeButton", ContactMeButton)
 }

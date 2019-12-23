@@ -26,8 +26,8 @@
 </template>
 
 <page-query>
-query BlogTag ($path: String!) {
-  tag: blogTag (path: $path) {
+query BlogTag ($id: String!) {
+  tag: blogTag (id: $id) {
     title
     belongsTo {
       edges {

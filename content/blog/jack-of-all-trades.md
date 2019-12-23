@@ -2,10 +2,9 @@
 title: Jack of All Trades
 description: "A random post about my condition being a jack of all trade guy"
 cover_image: ./images/camera-iphone-macbook-pro-office-62689.jpg
-tags: ['Life', 'Thought']
+tags: ['Featured', 'Life', 'Thought']
 date: 2019-02-06
 canonical_url: false
-featured: true
 published: true
 ---
 
