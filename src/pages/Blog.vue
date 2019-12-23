@@ -19,7 +19,7 @@
 </template>
 
 <page-query>
-{
+query Blog {
   posts: allBlogPost(filter: { published: { eq: true }}) {
     edges {
       node {
@@ -35,11 +35,6 @@
         timeToRead
         description
         cover_image (width: 770, height: 380, blur: 10)
-        ...on BlogPost {
-            id
-            title
-            path
-        }
       }
     }
   }

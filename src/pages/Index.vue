@@ -10,7 +10,8 @@
 
     <section class="page__section">
       <div class="page__container page__container--padding">
-        <h2>Hi! 👋</h2>
+        <Content :template="$page.static.content" />
+        <!-- <h2>Hi! 👋</h2>
         <p>
           Thank you for visiting this website! This is my personal website. So it's better if you <g-link to="/about">know more about myself</g-link> before proceed further 😄.
         </p>
@@ -39,12 +40,22 @@
             <FAIcon icon="envelope" />
             Contact Me
           </CTA>
-        </p>
+        </p> -->
       </div>
     </section>
 
   </Layout>
 </template>
+
+<page-query>
+query About {
+  static: static (path: "/home") {
+    title
+    description
+    content
+  }
+}
+</page-query>
 
 <script>
 import Author from '~/components/Author.vue'

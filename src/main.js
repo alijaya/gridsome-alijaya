@@ -11,6 +11,10 @@ import { faAngleDown, faAngleLeft, faAngleRight, faEnvelope } from '@fortawesome
 import { faLinkedin, faYoutube, faGithub, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
 import { FontAwesomeIcon } from '@fortawesome/vue-fontawesome'
 
+// Global Reusable Component
+import Content from "~/components/Content"
+import ContactMeButton from "~/components/ContactMeButton"
+
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function (Vue, { router, head, isClient }) {
   Vue.config.devtools = true
@@ -51,4 +55,8 @@ export default function (Vue, { router, head, isClient }) {
   Vue.prototype.$mqFrom = function (breakpoint) {
     return this.$mqAvailableBreakpoints[breakpoint] <= this.$mqAvailableBreakpoints[this.$mq];
   }
+
+  // Global Re-Usable Component
+  Vue.component('Content', Content)
+  Vue.component("ContactMeButton", ContactMeButton)
 }

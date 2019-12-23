@@ -31,11 +31,20 @@ module.exports = {
         refs: {
           // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
           tags: {
-            typeName: 'Tag',
+            typeName: 'BlogTag',
             route: '/blog/tag/:id',
             create: true
           }
         }
+      }
+    },
+    {
+      // Create posts from markdown files
+      use: '@gridsome/source-filesystem',
+      options: {
+        typeName: 'Static',
+        path: 'content/static/*.md',
+        route: '/:slug',
       }
     }
   ],
@@ -53,11 +62,15 @@ module.exports = {
     }
   },
 
+  runtimeCompiler: true,
+
   chainWebpack (config) {
     const types = ['vue-modules', 'vue', 'normal-modules', 'normal']
 
     types.forEach(type => {
       addStyleResource(config.module.rule('scss').oneOf(type))
     })
+
+    // config.resolve.alias["vue"] = "vue/dist/vue.common"
   }
 }
