@@ -1,10 +1,12 @@
 <template>
   <p class="display-blog">
-    <HorizontalScroller>
-      <PostSmallCard v-for="node in data" :key="node.id" 
-        :post="node" 
-        class="display-blog__card" />
-    </HorizontalScroller>
+    <ClientOnly>
+      <HorizontalScroller>
+        <PostSmallCard v-for="node in data" :key="node.id" 
+          :post="node" 
+          class="display-blog__card" />
+      </HorizontalScroller>
+    </ClientOnly>
   </p>
 </template>
 
