@@ -1,6 +1,9 @@
 <template>
   <div class="horizontal-scroller" :class="computedClass">
-    <div class="horizontal-scroller__content" ref="content" v-dragscroll.x @scroll="updateState">
+    <div class="horizontal-scroller__content" 
+      ref="content" 
+      v-dragscroll.x 
+      @scroll="updateState">
       <slot />
     </div>
   </div>
@@ -72,14 +75,20 @@ export default {
       opacity: 0;
     }
   }
-}
 
-.horizontal-scroller__content {
-  display: flex;
-  overflow: hidden;
+  &__content {
+    display: flex;
+    overflow: hidden;
 
-  > * {
-    flex: 0 0 auto;
+    cursor: grab;
+    &:active {
+      cursor: grabbing;
+    }
+
+    > * {
+      flex: 0 0 auto;
+    }
   }
 }
+
 </style>

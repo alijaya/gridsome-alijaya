@@ -4,7 +4,7 @@
       <g-image alt="Cover image" class="post-small-card__image" :src="post.cover_image" v-if="post.cover_image"/>
     </div>
     <div class="post-small-card__content">
-      <g-link :to="post.path" class="post-small-card__title-link">{{post.title}}</g-link>
+      <g-link :to="post.path" class="post-small-card__title-link" data-no-dragscroll>{{post.title}}</g-link>
     </div>
   </div>
 </template>

@@ -17,6 +17,19 @@ export default {
     HorizontalScroller,
     PostSmallCard,
   },
+  // data() {
+  //   return {
+  //     mockData: [
+  //       { id: 0, path: '/', title: 'Ali Jaya Meilio Lie' },
+  //       { id: 1, path: '/about', title: 'Anthony Julianto Lie' },
+  //       { id: 2, path: '/blog', title: 'Lisa Agustina Lie' },
+  //       { id: 3, path: '/project', title: 'Arianto Suteja Lie' },
+  //       { id: 4, path: '/', title: 'Rina Lie' },
+  //       { id: 5, path: '/', title: 'Ali Jaya Meilio Lie' },
+  //       { id: 6, path: '/', title: 'Ali Jaya Meilio Lie' },
+  //     ]
+  //   }
+  // },
   props: ['data']
 }
 </script>
