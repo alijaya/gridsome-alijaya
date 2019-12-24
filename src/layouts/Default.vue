@@ -33,6 +33,7 @@ export default {
 .footer {
   position: relative;
   display: flex;
+  flex-flow: wrap;
   align-items: center;
   justify-content: center;
   padding: calc(var(--space) / 2);
