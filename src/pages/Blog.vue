@@ -20,7 +20,7 @@
 
 <page-query>
 query Blog {
-  posts: allBlogPost(filter: { published: { eq: true }}) {
+  posts: allBlogPost {
     edges {
       node {
         id

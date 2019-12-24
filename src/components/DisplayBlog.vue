@@ -39,6 +39,7 @@ export default {
 <style lang="scss" scoped>
 .display-blog {
   &__card {
+    margin: 0;
     margin-left: var(--sm-space);
     &:first-child {
       margin-left: 0;

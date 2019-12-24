@@ -57,6 +57,17 @@ export default {
     featuredBlog() {
       return this.$page.featuredBlog.belongsTo.edges.map(edge => edge.node)
     }
+  },
+  metaInfo () {
+    return {
+      title: this.$page.static.title,
+      meta: [
+        {
+          name: 'description',
+          content: this.$page.static.description
+        }
+      ]
+    }
   }
 }
 </script>

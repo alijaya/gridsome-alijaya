@@ -5,7 +5,6 @@ cover_image: ./images/camera-iphone-macbook-pro-office-62689.jpg
 tags: ['Featured', 'Life', 'Thought']
 date: 2019-02-06
 canonical_url: false
-published: true
 ---
 
 I don't know what will this post about.
