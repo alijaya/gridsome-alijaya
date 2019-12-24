@@ -6,7 +6,6 @@ import DefaultLayout from '~/layouts/Default.vue'
 
 // 3rd party
 import VueMq from 'vue-mq'
-import VueDragscroll from 'vue-dragscroll'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { faAngleDown, faAngleLeft, faAngleRight, faEnvelope } from '@fortawesome/free-solid-svg-icons'
 import { faLinkedin, faYoutube, faGithub, faFacebook, faInstagram } from '@fortawesome/free-brands-svg-icons'
@@ -59,7 +58,10 @@ export default function (Vue, { router, head, isClient }) {
   }
 
   // VueDragscroll
-  Vue.use(VueDragscroll)
+  if (process.isClient) {
+    const VueDragscroll = require('vue-dragscroll').default
+    Vue.use(VueDragscroll)
+  }
 
   // Global Re-Usable Component
   Vue.component('Content', Content)
