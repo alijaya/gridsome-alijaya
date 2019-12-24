@@ -6,7 +6,11 @@ html {
 // Dark default theme
 body {
   --bg-color: #0D2538;
+  --bg-t-color: #0d253800;
+  --bg-t-gradient: var(--bg-color), var(--bg-t-color);
   --bg-content-color: #0f2d44;
+  --bg-content-t-color: #0f2d4400;
+  --bg-content-t-gradient: var(--bg-content-color), var(--bg-content-t-color);
   --bg-code: rgba(0,0,0,.3);
   --border-color:  rgba(255,255,255,.1);
   --body-color: rgba(255, 255, 255, 0.8);

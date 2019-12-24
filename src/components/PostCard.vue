@@ -1,5 +1,5 @@
 <template>
-  <div class="post-card content-box" :class="{'post-card--has-poster' : post.poster}">
+  <div class="content-box post-card">
     <div class="post-card__header">
       <g-link :to="post.path" v-if="post.cover_image">
         <g-image alt="Cover image" class="post-card__image" :src="post.cover_image" />
@@ -9,7 +9,9 @@
       <h2 class="post-card__title">
         <g-link :to="post.path" class="post-card__title-link">{{post.title}}</g-link>
       </h2>
-      <p class="post-card__description" v-html="post.description" />
+      <p class="post-card__description">
+        {{post.description}}
+      </p>
       
       <PostMeta class="post-card__meta" :post="post" />
       <PostTags class="post-card__tags" :post="post" />
@@ -32,10 +34,11 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .post-card {
   margin-bottom: var(--space);
   position: relative;
+  transition: transform .3s, box-shadow .6s;
 
   &__header {
     margin-left: calc(var(--space) * -1);
@@ -64,7 +67,7 @@ export default {
 
   &:hover {
     transform: translateY(-5px);
-    box-shadow: 1px 10px 30px 0 rgba(0,0,0,.1);
+    box-shadow: var(--shadow-hover);
   }
 
   &__tags {

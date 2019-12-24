@@ -7529,6 +7529,10 @@ vue-analytics@^5.16.1:
   version "5.17.0"
   resolved "https://registry.yarnpkg.com/vue-analytics/-/vue-analytics-5.17.0.tgz#c9530b82b9b4acd111c9cba7d249adf4089746b3"
 
+vue-dragscroll@^1.10.2:
+  version "1.10.2"
+  resolved "https://registry.yarnpkg.com/vue-dragscroll/-/vue-dragscroll-1.10.2.tgz#34ace3c6aa7a39edc157cac5e9ea1d5b31b1119c"
+
 vue-hot-reload-api@^2.3.0:
   version "2.3.3"
   resolved "https://registry.yarnpkg.com/vue-hot-reload-api/-/vue-hot-reload-api-2.3.3.tgz#2756f46cb3258054c5f4723de8ae7e87302a1ccf"

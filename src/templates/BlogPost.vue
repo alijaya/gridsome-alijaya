@@ -78,12 +78,12 @@ query BlogPost ($path: String!) {
     }
     description
     content
-    cover_image (width: 860, blur: 10)
+    cover_image (width: 800, height: 400, blur: 10)
   }
 }
 </page-query>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .post-title {
   position: relative;
   text-align: center;
@@ -95,9 +95,14 @@ query BlogPost ($path: String!) {
     top: 0;
     left: 50%;
     transform: translate(-50%, -100%);
+    white-space: nowrap;
 
     font-weight: bold;
     opacity: 0.5;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 

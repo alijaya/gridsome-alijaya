@@ -23,7 +23,7 @@ query {
 }
 </static-query>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .author {
   margin: 0 auto;
   max-width: 500px;

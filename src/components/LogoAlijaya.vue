@@ -8,7 +8,7 @@
   </span>
 </template>
 
-<style>
+<style lang="scss" scoped>
 .logo-alijaya {
   display: inline-flex;
   font-family: 'Fredoka One', 'Quicksand', sans-serif;

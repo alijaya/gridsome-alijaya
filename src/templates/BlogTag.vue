@@ -44,7 +44,7 @@ query BlogTag ($id: String!) {
             date (format: "D. MMMM YYYY")
             timeToRead
             description
-            cover_image (width: 770, height: 380, blur: 10)
+            cover_image (width: 800, height: 400, blur: 10)
           }
         }
       }
@@ -76,7 +76,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .post-title {
   position: relative;
   text-align: center;
@@ -88,9 +88,14 @@ export default {
     top: 0;
     left: 50%;
     transform: translate(-50%, -100%);
+    white-space: nowrap;
 
     font-weight: bold;
     opacity: 0.5;
+
+    &:hover {
+      opacity: 0.7;
+    }
   }
 }
 

@@ -11,6 +11,7 @@
     <section class="page__section">
       <div class="page__container page__container--padding">
         <Content :template="$page.static.content" :context="this" />
+        <HorizontalScroller />
       </div>
     </section>
 
@@ -32,8 +33,9 @@ query Index {
         node {
           ...on BlogPost {
             id
-            title
             path
+            title
+            cover_image (width: 200, height: 100, blur: 5)
           }
         }
       }
@@ -44,12 +46,12 @@ query Index {
 
 <script>
 import Author from '~/components/Author'
-import DisplayBlog from '~/components/DisplayBlog'
+import HorizontalScroller from '~/components/HorizontalScroller'
 
 export default {
   components: {
     Author,
-    DisplayBlog,
+    HorizontalScroller,
   },
   computed: {
     featuredBlog() {
@@ -59,5 +61,5 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 </style>

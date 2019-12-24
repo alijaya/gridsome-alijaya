@@ -74,7 +74,7 @@ export default {
 }
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .short-bio {
   display: flex;
   flex-direction: column;

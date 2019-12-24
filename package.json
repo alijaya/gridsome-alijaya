@@ -18,6 +18,7 @@
     "gridsome": "^0.6.7",
     "remark-emoji": "^2.0.2",
     "v-runtime-template": "^1.10.0",
+    "vue-dragscroll": "^1.10.2",
     "vue-mq": "^1.0.1"
   },
   "devDependencies": {

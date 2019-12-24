@@ -14,7 +14,7 @@ query {
 }
 </static-query>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .logo {
 	text-decoration: none;
   color: var(--body-color)!important;
