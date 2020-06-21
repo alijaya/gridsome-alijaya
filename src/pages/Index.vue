@@ -25,7 +25,7 @@ query Index {
     description
     content
   }
-  featuredBlog: blogTag (id: "Featured") {
+  featuredBlog: blogTag (id: "featured") {
     title
     path
     belongsTo {
@@ -55,7 +55,7 @@ export default {
   },
   computed: {
     featuredBlog() {
-      return this.$page.featuredBlog.belongsTo.edges.map(edge => edge.node)
+      return (this.$page.featuredBlog)? this.$page.featuredBlog.belongsTo.edges.map(edge => edge.node) : []
     }
   },
   metaInfo () {
