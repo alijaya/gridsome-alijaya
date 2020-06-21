@@ -4,7 +4,7 @@
     <g-image alt="Author image" class="author__image" src="~/assets/images/logo-alijaya.png" blur="5" />
 
     <h1 class="author__site-title">
-      {{ $static.metaData.siteName }}
+      {{ $static.metadata.siteName }}
     </h1>
 
     <p class="author__intro">
@@ -17,7 +17,7 @@
 
 <static-query>
 query {
-  metaData {
+  metadata {
     siteName
   }
 }

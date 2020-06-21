@@ -20,6 +20,12 @@ module.exports = {
   siteName: "alijaya's website",
   siteDescription: 'A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.',
 
+  templates: {
+    BlogPost: '/blog/:title',
+    BlogTag: '/blog/tag/:id',
+    Static: '/:title',
+  },
+
   plugins: [
     {
       // Create posts from markdown files
@@ -27,12 +33,10 @@ module.exports = {
       options: {
         typeName: 'BlogPost',
         path: 'content/blog/*.md',
-        route: '/blog/:slug',
         refs: {
           // Creates a GraphQL collection from 'tags' in front-matter and adds a reference.
           tags: {
             typeName: 'BlogTag',
-            route: '/blog/tag/:id',
             create: true
           }
         }
@@ -44,9 +48,14 @@ module.exports = {
       options: {
         typeName: 'Static',
         path: 'content/static/*.md',
-        route: '/:slug',
       }
-    }
+    },
+    {
+      use: `gridsome-plugin-netlify-cms`,
+      options: {
+        publicPath: `/admin`
+      }
+    },
   ],
 
   transformers: {

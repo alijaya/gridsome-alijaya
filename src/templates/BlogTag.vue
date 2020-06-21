@@ -26,7 +26,7 @@
 </template>
 
 <page-query>
-query BlogTag ($id: String!) {
+query BlogTag ($id: ID!) {
   tag: blogTag (id: $id) {
     title
     belongsTo {
