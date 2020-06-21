@@ -63,6 +63,12 @@ module.exports = {
         coverField: 'cover_image'
       }
     },
+    {
+      use: '@gridsome/plugin-google-analytics',
+      options: {
+        id: 'UA-49268042-2',
+      }
+    }
   ],
 
   transformers: {
