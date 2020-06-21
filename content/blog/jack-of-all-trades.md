@@ -1,9 +1,12 @@
 ---
 title: Jack of All Trades
-description: "A random post about my condition being a jack of all trade guy"
-cover_image: ./images/camera-iphone-macbook-pro-office-62689.jpg
-tags: ['Featured', 'Life', 'Thought']
-date: 2019-02-06
+description: A random post about my condition being a jack of all trade guy
+cover_image: /uploads/camera-iphone-macbook-pro-office-62689.jpg
+date: 2019-02-06T00:00:00.000Z
+tags:
+  - Featured
+  - Life
+  - Thought
 canonical_url: false
 ---
 
