@@ -1,7 +1,6 @@
 ---
 title: Home
 description: "It's the website of alijaya. Come! You can stalk here 😄"
-date: 2019-12-24
 ---
 # Hi! 👋
 

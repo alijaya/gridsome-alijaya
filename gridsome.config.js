@@ -56,6 +56,13 @@ module.exports = {
         publicPath: `/admin`
       }
     },
+    {
+      use: 'gridsome-plugin-netlify-cms-paths',
+      options: {
+        contentTypes: ['BlogPost', 'Static'],
+        coverField: 'cover_image'
+      }
+    },
   ],
 
   transformers: {

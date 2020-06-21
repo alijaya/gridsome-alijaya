@@ -1,7 +1,6 @@
 ---
 title: About
 description: "It's about Ali Jaya Meilio Lie or alijaya."
-date: 2019-12-24
 ---
 Hi! My name is Ali Jaya Meilio Lie, but you can use *alijaya* because it's my internet name.
 
