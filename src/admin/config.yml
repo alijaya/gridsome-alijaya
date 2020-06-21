@@ -22,7 +22,7 @@ collections:
       - {label: "Cover Image", name: "cover_image", required: false, widget: "image"}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Tags", name: "tags", required: false, widget: "list"}
-      - {label: "Content", name: "content", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown"}
   - label: "Static"
     name: "static"
     folder: "content/static"
@@ -32,4 +32,4 @@ collections:
     fields:
       - {label: "Title", name: "title", widget: "string"}
       - {label: "Description", name: "description", widget: "text"}
-      - {label: "Content", name: "content", widget: "markdown"}
+      - {label: "Body", name: "body", widget: "markdown"}
