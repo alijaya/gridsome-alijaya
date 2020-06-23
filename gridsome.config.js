@@ -19,6 +19,7 @@ function addStyleResource (rule) {
 module.exports = {
   siteName: "alijaya's website",
   siteDescription: "It's the website of alijaya. Come! You can stalk here 😄",
+  siteUrl: "https://alijaya.id",
 
   templates: {
     BlogPost: '/blog/:title',

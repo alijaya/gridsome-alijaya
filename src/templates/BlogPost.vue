@@ -31,9 +31,9 @@
       </div>
     </section>
 
-    <div class="post-comments">
-      <!-- Add comment widgets here -->
-    </div>
+    <section class="page__section">
+      <FbComments class="post-comments" colorscheme="dark" :href="currentPath" />
+    </section>
 
     <Author class="post-author" />
   </Layout>
@@ -43,12 +43,14 @@
 import PostMeta from '~/components/PostMeta'
 import PostTags from '~/components/PostTags'
 import Author from '~/components/Author'
+import FbComments from '~/components/FbComments'
 
 export default {
   components: {
     Author,
     PostMeta,
-    PostTags
+    PostTags,
+    FbComments,
   },
   metaInfo () {
     return {
@@ -61,12 +63,23 @@ export default {
         }
       ]
     }
+  },
+  computed: {
+    currentPath() {
+      return this.$page.metadata.siteUrl + this.$page.post.path
+    }
+  },
+  mounted () {
+    console.log(this.currentPath)
   }
 }
 </script>
 
 <page-query>
 query BlogPost ($path: String!) {
+  metadata {
+    siteUrl
+  }
   post: blogPost (path: $path) {
     title
     path
@@ -138,11 +151,9 @@ query BlogPost ($path: String!) {
 }
 
 .post-comments {
-  padding: calc(var(--space) / 2);
-  
-  &:empty {
-    display: none;
-  }
+  width: 100%;
+  max-width: var(--content-width);
+  margin-top: calc(var(--space) / 2);
 }
 
 .post-author {

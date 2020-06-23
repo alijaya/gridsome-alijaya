@@ -16,6 +16,31 @@ import Content from "~/components/Content"
 import DisplayBlog from "~/components/DisplayBlog"
 import ContactMeButton from "~/components/ContactMeButton"
 
+// FB SDK
+const registerFBSDK = (head, appId, version = 'v7.0', id = 'facebook-jssdk') => {
+  if (process.isClient) {
+    window.fbAsyncInit = () => {
+      window.FB.init({
+        appId: appId,
+        xfbml: true,
+        autoLogAppEvents: true,
+        version: version,
+      })
+    }
+  }
+  
+  head.meta.push({
+    property: 'fb:app_id',
+    content: appId,
+  })
+  head.script.push({
+    id: id,
+    async: true,
+    defer: true,
+    src: 'https://connect.facebook.net/en_US/sdk.js'
+  })
+}
+
 // The Client API can be used here. Learn more: gridsome.org/docs/client-api
 export default function (Vue, { router, head, isClient }) {
   Vue.config.devtools = true
@@ -62,6 +87,8 @@ export default function (Vue, { router, head, isClient }) {
     const VueDragscroll = require('vue-dragscroll').default
     Vue.use(VueDragscroll)
   }
+
+  registerFBSDK(head, '612722629432510')
 
   // Global Re-Usable Component
   Vue.component('Content', Content)

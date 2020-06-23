@@ -66,10 +66,10 @@ export default {
           key: 'description',
           name: 'description',
           content: this.$page.static.description
-        }
+        },
       ]
     }
-  }
+  },
 }
 </script>
 
