@@ -18,7 +18,7 @@ function addStyleResource (rule) {
 
 module.exports = {
   siteName: "alijaya's website",
-  siteDescription: 'A simple, hackable & minimalistic starter for Gridsome that uses Markdown for content.',
+  siteDescription: "It's the website of alijaya. Come! You can stalk here 😄",
 
   templates: {
     BlogPost: '/blog/:title',

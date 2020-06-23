@@ -65,6 +65,7 @@ export default {
       title: this.$page.static.title,
       meta: [
         {
+          key: 'description',
           name: 'description',
           content: this.$page.static.description
         }
