@@ -21,7 +21,7 @@ const registerFBSDK = (head, appId, version = 'v7.0', id = 'facebook-jssdk') => 
   if (process.isClient) {
     const fbRoot = document.createElement('div')
     fbRoot.id = 'fb-root'
-    document.body.append(fbRoot)
+    document.body.appendChild(fbRoot)
     
     window.fbAsyncInit = () => {
       window.FB.init({
@@ -31,18 +31,19 @@ const registerFBSDK = (head, appId, version = 'v7.0', id = 'facebook-jssdk') => 
         version: version,
       })
     }
+    
+    head.script.push({
+      id: id,
+      async: true,
+      defer: true,
+      src: 'https://connect.facebook.net/en_US/sdk.js'
+    })
   }
   
   head.meta.push({
     key: 'fb:app_id',
     property: 'fb:app_id',
     content: appId,
-  })
-  head.script.push({
-    id: id,
-    async: true,
-    defer: true,
-    src: 'https://connect.facebook.net/en_US/sdk.js'
   })
 }
 
