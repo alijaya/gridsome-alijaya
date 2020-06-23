@@ -17,19 +17,20 @@ import DisplayBlog from "~/components/DisplayBlog"
 import ContactMeButton from "~/components/ContactMeButton"
 
 // FB SDK
-const registerFBSDK = (head, appId, version = 'v7.0', id = 'facebook-jssdk') => {
+const registerFBSDK = (head, appId, id = 'facebook-jssdk') => {
   if (process.isClient) {
     window.fbAsyncInit = () => {
       window.FB.init({
         appId: appId,
         xfbml: true,
         autoLogAppEvents: true,
-        version: version,
+        version: 'v7.0',
       })
     }
   }
   
   head.meta.push({
+    key: 'fb:app_id',
     property: 'fb:app_id',
     content: appId,
   })
